@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RPS game</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+<body>
+    <h1>ROCK PAPER SCISSORS</h1>
+    
+    <main class="option">
+       <section class="poption">
+        <h2> YOU PICK . . .</h2>
+
+         <div class="images">
+            <img id="r-img" src="images/rock.png" alt="hand as rock" onclick="play('rock')">
+            <img id="p-img" src="images/paper.png" alt="hand as paper" onclick="play('paper')">
+            <img id="s-img" src="images/scissors.png" alt="hand as scissors" onclick="play('scissors')">
+         </div>
+       </section>
+
+       <section class="coption">
+        <h2> COMPUTER PICKS . . .</h2>
+        <img id="c-img" scr="images/mystery.png" alt="" >
+       </section>
+</main>
+
+<section class="scoreboard">
+  <h2 id="result">RESULT</h2>
+  <div id="play" class="score">
+    <p id="wins">0</p>
+    <p class="label">WINS</p>
+  </div>
+  <div id="neither" class="score">
+    <p id="ties">0</p>
+    <p class="label">TIES</p>
+  </div>
+  <div id="opp" class=""score">
+    <p id="losses">0</p>
+    <p class="label">LOSSES</p>
+  </div>
+  <div class="reset">
+    <button onclick="reset()">RESET SCORE</button>
+  </div>
+  </section>
+
+  <script src="js/page.js"></script>
+
+</body>
+</html>
