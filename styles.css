@@ -76,29 +76,44 @@ section.scoreboard {
     grid-column-end: 4;
   }
   .score {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(73, 129, 176);
+
+    background-color: rgb(130, 145, 158);
     border-style: solid;
 
     padding: 10px;
     width: 80px;
+    height: 100px;
     margin: 5px;
+
   }
 
+
   #wins, #losses, #ties {
-    font-size: 2rem;
+    font-size: 80px;
     font-weight: 800;
     line-height: 1;
-    margin-bottom: .25rem;
+    margin-bottom: 4.5rem;
+    color: rgb(222, 206, 31);
   }
   p.label {
+    font-size: 2rem;
     line-height: 1;
     margin-top: 0;
+
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
+
+
+
   .reset {
     grid-column-start: 1;
     grid-column-end: 4;
