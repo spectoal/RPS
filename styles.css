@@ -1,12 +1,26 @@
+@font-face{
+font-family: "Scoreboard";
+src: url(fonts/rounded-led-board-7/rounded_led_board-7.ttf);
+}
+
+@font-face{
+    font-family: "SBT";
+    src: url(fonts/advanced-led-board-7/advanced_led_board-7.ttf);
+}
+
+
 body {
 width: 65%;
 margin: auto;
 background-color: rgb(87, 146, 194);
 }
 
-h1, h2{
+ h3{
     text-align: center;
+    transform: translateY(-45%);
 }
+
+
 
 section {
     margin: 1rem 0;
@@ -32,22 +46,39 @@ main section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transform: translateY(25%);
+
 }
+
+#title {
+    transform: translateY(20%);
+}
+
+
 
 .images {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 .images img {
     opacity: 80%;
     transition: all .3s ease-in-out;
+    max-width: 100%;
+}
+
+.images > #c-img {
+    opacity: 100%;
+    transform: scale(1);
 }
 .images img:hover {
     opacity: 100%;
     transform: scale(1.3);
 }
+
 
 
 
@@ -60,7 +91,13 @@ section.scoreboard {
     color: white;
     border-radius: 10px;
 
+    height: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+
+    font-family: SBT;
+    font-size: 40px;
+
+    transform: translateY(30%);
 
   }
 
@@ -76,20 +113,27 @@ section.scoreboard {
     grid-column-end: 4;
   }
   .score {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    
     background-color: rgb(130, 145, 158);
     border-style: solid;
+
+   
+    transform: translateY(-25%);
+
 
     padding: 10px;
     width: 80px;
     height: 100px;
     margin: 5px;
+
+    margin: auto;
+    position: relative;
+
+    font-family: SBT;
 
   }
 
@@ -98,20 +142,31 @@ section.scoreboard {
     font-size: 80px;
     font-weight: 800;
     line-height: 1;
-    margin-bottom: 4.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1.3rem;
     color: rgb(222, 206, 31);
+    font-family: scoreboard;
+
+   
+
   }
   p.label {
     font-size: 2rem;
     line-height: 1;
     margin-top: 0;
 
-    position: absolute;
+    
     bottom: 6rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(0%);
+    transform: translateY(-500%);
   }
 
+
+  @media screen and (max-width: 768px)  {
+    main {grid-template-columns: 1fr;}
+    main img {transform: scale(.9);}
+  }
 
 
   .reset {
@@ -124,5 +179,6 @@ section.scoreboard {
     padding: .25rem .5rem;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    transform: translateY(-150%);
   }
   
