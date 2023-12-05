@@ -147,9 +147,8 @@ section.scoreboard {
     color: rgb(222, 206, 31);
     font-family: scoreboard;
 
-   
-
   }
+  
   p.label {
     font-size: 2rem;
     line-height: 1;
