@@ -8,6 +8,11 @@ src: url(fonts/rounded-led-board-7/rounded_led_board-7.ttf);
     src: url(fonts/advanced-led-board-7/advanced_led_board-7.ttf);
 }
 
+@font-face{
+  font-family: "tiny";
+  src: url(fonts/tiny_chalk/TinyChalk-Regular.otf);
+}
+
 
 body {
 width: 65%;
@@ -18,6 +23,12 @@ background-color: rgb(87, 146, 194);
  h3{
     text-align: center;
     transform: translateY(-45%);
+}
+
+h2 {
+  font-family: tiny;
+  font-size: 50px;
+  color:rgb(12, 40, 103);
 }
 
 
@@ -53,6 +64,10 @@ main section {
 
 #title {
     transform: translateY(20%);
+
+    width: auto;
+    height: auto;
+  
 }
 
 
@@ -81,8 +96,6 @@ main section {
 
 
 
-
-
 section.scoreboard {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -98,7 +111,7 @@ section.scoreboard {
     font-size: 40px;
 
     transform: translateY(30%);
-
+    
   }
 
 
@@ -158,14 +171,27 @@ section.scoreboard {
     bottom: 6rem;
     left: 50%;
     transform: translateX(0%);
-    transform: translateY(-500%);
+    transform: translateY(-550%);
   }
 
 
-  @media screen and (max-width: 768px)  {
-    main {grid-template-columns: 1fr;}
-    main img {transform: scale(.9);}
+
+@media screen and (max-width: 600px) {
+  .score {
+      height: auto; 
   }
+
+  #wins, #losses, #ties {
+      font-size: 40px;
+      margin-bottom: 1rem;
+      margin-left: 0.5rem;
+  }
+
+  p.label {
+      font-size: 1.5rem;
+      bottom: 3rem;
+  }
+}
 
 
   .reset {
