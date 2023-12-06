@@ -5,9 +5,9 @@ function play(option) {
     document.getElementById('c-img').src = "";
     document.getElementById('result').innerHTML = " . . .";
 
-    let wins = sessionStorage.getItem("winCount");
-    let ties = sessionStorage.getItem("tieCount");
-    let losses = sessionStorage.getItem("lossCount");
+    let wins = sessionStorage.getItem("winCount") || 0;
+    let ties = sessionStorage.getItem("tieCount") || 0;
+    let losses = sessionStorage.getItem("lossCount") || 0;
 
     if (wins == null) {
         wins = 0;
@@ -19,42 +19,42 @@ function play(option) {
     } else {
         ties = ties;
     };
-    if (losses = null) {
+    if (losses == null) {
         losses = 0;
     } else {
         losses = losses;
     };
 
     setTimeout(() => {
-        if (pOption === 1 && cOption === "rock") {
+        if (pOption === "rock" && cOption === 1) {
             document.getElementById('c-img').src = "images/rock.png";
             document.getElementById('result').innerHTML = "rock TIES rock";
             ++ties;
-        } else if (pOption === 1 && cOption === "scissors") {
+        } else if (pOption === "scissors" && cOption === 1) {
             document.getElementById('c-img').src = "images/rock.png";
             document.getElementById('result').innerHTML = "scissors LOSES to rock";
             ++losses;
-        } else if (pOption === 1 && cOption === "paper") {
+        } else if (pOption === "paper" && cOption === 1) {
             document.getElementById('c-img').src = "images/rock.png";
             document.getElementById('result').innerHTML = "Paper BEATS rock";
             ++wins;
-        } else if (pOption === 1 && cOption === "rock") {
+        } else if (pOption === "rock" && cOption === 2) {
             document.getElementById('c-img').src = "images/paper.png";
             document.getElementById('result').innerHTML = "Rock LOSES to paper";
             ++losses;
-        } else if (pOption === 1 && cOption === "paper") {
+        } else if (pOption === "paper" && cOption === 2) {
             document.getElementById('c-img').src = "images/paper.png";
             document.getElementById('result').innerHTML = "Paper TIES paper";
             ++ties;
-        } else if (pOption === 1 && cOption === "scissors") {
-            document.getElementById('c-img').src = "imgages/paper.png";
+        } else if (pOption === "scissors" && cOption === 2) {
+            document.getElementById('c-img').src = "images/paper.png";
             document.getElementById('result').innerHTML = "Scissors BEATS paper";
             ++wins;
-        } else if (pOption === 1 && cOption === "rock") {
+        } else if (pOption === "rock" && cOption === 3) {
             document.getElementById('c-img').src = "images/scissors.png";
             document.getElementById('result').innerHTML = "Rock BEATS scissors";
             ++wins;
-        } else if (pOption === 1 && cOption === "paper") {
+        } else if (pOption === "paper" && cOption === 3) {
             document.getElementById('c-img').src = "images/scissors.png";
             document.getElementById('result').innerHTML = "Paper LOSES to scissors";
             ++losses;
